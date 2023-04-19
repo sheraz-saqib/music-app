@@ -1,5 +1,6 @@
 // get sound reference==========//
 const sound_img = document.querySelector(".img-area img"),
+ imgArea = document.querySelector(".img-area "),
   soung_text = document.querySelector(".soung-text p"),
   play_li = document.querySelector(".play_li"),
   currentTime = document.querySelector(".currentTime"),
@@ -16,13 +17,16 @@ const likeIcon = document.querySelector(".bx-heart"),
   bookMark = document.querySelector(".bx-bookmark");
 //============================//
 // songs collection===========//
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    gif.style.display = "none";
-  }, 100);
-  sound_img.style.display = "block";
-});
 
+const animation = ()=>{
+  setTimeout(() => {
+    imgArea.classList.remove('skeleon')
+    sound_img.style.zIndex = 999
+  }, 2000);
+  imgArea.classList.add('skeleon')
+  sound_img.style.zIndex = -1
+
+}
 const songsCollection = [
   {
     sondName: "jana e safer",
@@ -81,15 +85,12 @@ getSound.songPath.addEventListener("timeupdate", () => {
 });
 
 play.addEventListener("click", () => {
+  // animation()
   sound_img.src = getSound.songCover;
   soung_text.innerText = getSound.sondName;
   getSound.songPath.play();
   play.style.display = "none";
   pauseSong.style.display = "block";
-  setTimeout(() => {
-    gif.style.display = "none";
-  }, 200);
-  sound_img.style.display = "block";
 });
 
 pauseSong.addEventListener("click", () => {

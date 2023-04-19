@@ -32,6 +32,8 @@ padding: .5rem;
     background-color: white;
     border-radius: 1rem;
     min-height: 20rem;
+    display: flex;
+    justify-content: center;
 }
 .sound_detail .img-area{
     max-width: 40rem;
@@ -44,6 +46,7 @@ padding: .5rem;
     align-items: center;
     border-radius: 2rem;
     overflow: hidden;
+    
 }
 .img-area .img{
     aspect-ratio: 16/9;
@@ -51,7 +54,31 @@ padding: .5rem;
     min-height: 22rem;
     object-fit: cover;
     border-radius: 1rem;
-    display: none;
+   z-index: -1;
+}
+.sound_detail .skeleon{
+    animation: skeleton 2s infinite;
+    background-color: rgb(225, 226, 226);
+    z-index: 999;
+max-height: 10rem !important;
+min-height: 20rem !important;
+height: 100% !important;
+width: 90%;
+margin-top: 2rem;
+}
+@keyframes skeleton {
+    0%{
+        background-color: rgb(225, 226, 226);
+    }
+    50%{
+        background-color: #e0e0e0;
+    }
+    75%{
+        background-color: #f5f2f2;
+    }
+    100%{
+        background-color: rgb(234, 235, 236);
+    }
 }
 .img-area .gif{
     display: block;
@@ -106,6 +133,10 @@ justify-content: center;
   border-radius:50%;
   cursor:pointer;
   z-index: 22;
+  transition: .3s;
+}
+.sound-bar input::-webkit-slider-thumb:hover{
+    background:#000000;
 }
 .controls{
     display: flex;
@@ -182,7 +213,7 @@ body{
     padding: .5rem;
 }
     .container{
-        margin: .5rem;
+        margin: 1rem;
         width: 100%;
     }
     .img-area .img{
