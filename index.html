@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sound_detail">
+            <div class="img-area">
+<img class="img" src="./covers/1.jpg" alt="">
+<img class="gif" src="./img/icons8-loading-circle.gif" alt="">
+            </div>
+        </div>
+        <div class="soung-text">
+            <p>this is sound text</p>
+          
+        </div>
+        <div class="sound-bar">
+            <input type="range" name="" min="0" id="song_bar" value="0" max="100" step="1" >
+            <div class="time"><span class="currentTime">0:00</span> / <span class="totalTime">0:00</span></div>
+        </div>
+        <div class="controls">
+<div class="control-icon">
+    <ul class="control_ul">
+        <li class="control_li"><i class='bx bx-heart'></i></li>
+        <li class="control_li"><i class='bx bx-skip-previous'></i></li>
+        <li class="control_li play_li"><i class='bx bx-play'></i><i class='bx bx-pause'></i></li>
+        <li class="control_li"><i class='bx bx-skip-next'></i></li>
+        <li class="control_li"><i class='bx bx-bookmark'></i></li>
+    </ul>
+</div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
