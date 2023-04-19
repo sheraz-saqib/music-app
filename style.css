@@ -15,8 +15,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background-color: rgb(236, 236, 236); */
-    background-color: #121212;
+    background-color: rgb(236, 236, 236);
+    /* background-color: #121212; */
     user-select: none;
 }
 .container{
@@ -38,7 +38,7 @@ padding: .5rem;
     min-height: 27rem;
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,5 +175,22 @@ animation: pop  .3s 1;
     }
     100%{
         transform: scale(1);
+    }
+}
+@media only screen and (max-width:27.55em) {
+body{
+    padding: .5rem;
+}
+    .container{
+        margin: .5rem;
+        width: 100%;
+    }
+    .img-area .img{
+        aspect-ratio: 16/9;
+        max-width: 32rem;
+        min-height: 22rem;
+        object-fit: cover;
+        border-radius: 1rem;
+        display: none;
     }
 }
