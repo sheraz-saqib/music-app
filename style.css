@@ -222,6 +222,15 @@ body{
         min-height: 22rem;
         object-fit: cover;
         border-radius: 1rem;
-        display: none;
+    }
+    .sound_detail .skeleon{
+        animation: skeleton 2s infinite;
+        background-color: rgb(225, 226, 226);
+        z-index: 999;
+        max-width: 32rem;
+        min-height: 22rem;
+    height: 100% !important;
+    width: 90%;
+    margin-top: 2rem;
     }
 }
